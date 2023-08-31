@@ -25,4 +25,12 @@ export const TransactionsTable = styled.table`
       border-bottom-right-radius: 6px;
     }
   }
+`;
+
+interface PriceHighlightProps {
+  variant: 'income' | 'outcome';
+}
+
+export const PriceHighlight = styled.span<PriceHighlightProps>`
+  color: ${props => props.variant === 'income' ? props.theme["green-300"] : props.theme["red-300"]};
 `
